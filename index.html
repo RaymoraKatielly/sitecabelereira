@@ -1,0 +1,312 @@
+    <!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lidia Amaral - Cabeleireira</title>
+  <meta name="description" content="Lidia Amaral — cortes, penteados, escova e tratamentos. Agende seu horário!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#c97b6b; /* tom de salmão/rosa queimado */
+      --dark:#222;
+      --muted:#666;
+      --bg:#fff;
+      --radius:12px;
+      --max-width:1100px;
+      --gap:1.25rem;
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: light;
+    }
+    /* reset simples */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#fff 0%, #fff 50%, #fff 100%);color:var(--dark);line-height:1.45}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;border-radius:8px}
+    .container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+    /* header */
+    header{background:#fff;position:sticky;top:0;z-index:40;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
+    .brand{display:flex;gap:0.75rem;align-items:center}
+    .brand .logo{width:48px;height:48px;background:linear-gradient(135deg,var(--primary),#a65f50);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:'Playfair Display'}
+    nav ul{display:flex;gap:1rem;align-items:center;margin:0;padding:0;list-style:none}
+    .cta{background:var(--primary);color:#fff;padding:0.55rem 0.9rem;border-radius:10px;font-weight:600}
+    .menu-toggle{display:none;border:0;background:none;font-size:1.2rem}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 0}
+    .hero h1{font-family:'Playfair Display',serif;font-size:2.1rem;margin:0 0 0.6rem}
+    .hero p.lead{color:var(--muted);margin:0 0 1.2rem}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,0.06);padding:1.25rem}
+    .hours{font-size:0.95rem;color:var(--muted)}
+
+    /* sections */
+    section{padding:2rem 0}
+    h2{font-size:1.3rem;margin:0 0 0.8rem}
+    .grid{display:grid;gap:var(--gap)}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .service{background:#fff;padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .service h3{margin:0 0 0.5rem;font-size:1rem}
+    .price{font-weight:700;color:var(--primary)}
+
+    /* gallery */
+    .gallery{grid-template-columns:repeat(3,1fr);gap:0.7rem}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:1.25rem}
+    form{display:flex;flex-direction:column;gap:0.6rem}
+    input,textarea,button,select{padding:0.7rem;border-radius:10px;border:1px solid #e6e6e6;font-size:0.95rem}
+    button{background:var(--primary);color:white;border:0;padding:0.8rem 1rem;cursor:pointer;font-weight:600}
+
+    footer{padding:1.5rem 0;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .services{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:680px){
+      .nav ul{display:none}
+      .menu-toggle{display:block}
+      .menu-open{position:absolute;right:1rem;top:64px;background:#fff;padding:1rem;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+      .services{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+    .pill{display:inline-block;padding:0.25rem 0.7rem;border-radius:999px;background:rgba(201,123,107,0.1);color:var(--primary);font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">LA</div>
+        <div>
+          <div style="font-weight:700">Lidia Amaral</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Cortes • Penteados • Tratamentos</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+        <ul id="main-menu">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato" class="cta">Agende</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="pill">Atendimento com hora marcada</span>
+        <h1>Transforme o seu visual comigo</h1>
+        <p class="lead">Profissional experiente em cortes, escovas, tratamentos e penteados para ocasiões especiais. Atendimento personalizado e produtos de alta qualidade.</p>
+        <div style="display:flex;gap:0.8rem;align-items:center;margin-top:1rem">
+          <a href="#contato" class="cta">Agendar agora</a>
+          <a href="#servicos" style="padding:0.55rem 0.9rem;border-radius:10px;border:1px solid #eee;">Ver serviços</a>
+        </div>
+
+        <section id="servicos" style="margin-top:2rem">
+          <h2>Serviços populares</h2>
+          <div class="grid services">
+            <article class="service">
+              <h3>Corte feminino</h3>
+              <p class="muted">Consulta personalizada + finalização</p>
+              <div style="margin-top:0.6rem"><span class="price">R$ 80 - R$ 150</span></div>
+            </article>
+            <article class="service">
+              <h3>Penteados</h3>
+              <p class="muted">Simples, Festas e Noivas</p>
+              <div style="margin-top:0.6rem"><span class="price">R$ 120 - R$ 450</span></div>
+            </article>
+            <article class="service">
+              <h3>Tratamento capilar</h3>
+              <p class="muted">Reconstrução, hidratação e cauterização</p>
+              <div style="margin-top:0.6rem"><span class="price">R$ 90 - R$ 220</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="sobre" style="margin-top:2rem">
+          <h2>Sobre mim</h2>
+          <p class="muted">“Movida por desafios e apaixonada por criar, eu, Lidia Amaral, transformo boas ideias em experiências únicas.” </p>
+        </section>
+      </div>
+
+      <aside class="card">
+        <img src="fotos/fotodacapa.jpeg" alt="Cabeleireira ao trabalho">
+        <div style="margin-top:0.8rem">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">Aberto: Seg–Sáb</div>
+              <div class="hours muted">07:00 — 19:00</div>
+            </div>
+            <div style="text-align:right">
+              <div class="muted">Telefone</div>
+              <div style="font-weight:700">(66)99231-7646</div>
+            </div>
+          </div>
+          <div style="margin-top:1rem">Endereço: Av. Júlio Campos, R. Onze, 293 - Operário, Água Boa - MT, 78635-000</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="galeria">
+      <h2>Portifólio</h2>
+      <div class="grid gallery"> <!--class="grid" Aplica uma estrutura de layout em grade, que está definida no CSS.A galeria está configurada para exibir imagens lado a lado.-->
+         <img src="fotos/foto07.jpeg" alt="exemplo 1">
+        <img src="fotos/foto02.jpeg" alt="exemplo 2">
+        <img src="fotos/foto03.jpeg" alt="exemplo 3">
+        <img src="fotos/foto04.jpeg" alt="exemplo 4">
+        <img src="fotos/foto09.jpeg"exemplo 5">
+        <img src="fotos/foto10.jpeg" alt="exemplo 6">
+      </div>
+    </section>
+
+    <section id="depoimentos"> <!--Início da seção de depoimentos-->
+      <h2>Depoimentos</h2>
+      <div class="grid" style="grid-template-columns:repeat(2,1fr)"> <!--style="grid-template-columns:repeat(2,1fr)"
+        Esse estilo inline indica:
+        A grade terá 2 colunas iguais.
+        repeat(2,1fr) significa:
+        → repita 2 vezes
+        → cada coluna com 1 parte fracionária (= colunas de tamanhos iguais)
+        Ou seja: 2 depoimentos lado a lado.
+        (Mais tarde, você pode mover isso para o CSS.)-->
+        <blockquote class="card">
+          <p style="margin:0 0 0.6rem">"A melhor experiência! Profissionais atenciosos e resultado impecável."</p>
+          <footer class="muted">— Júlia, cliente</footer>
+        </blockquote>
+        <blockquote class="card">
+          <p style="margin:0 0 0.6rem">"Meu cabelo ficou incrível — super recomendo o tratamento de reconstrução."</p>
+          <footer class="muted">— Camila, cliente</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contato"> <!--<section> É uma seção temática do site. Serve para agrupar conteúdos que pertencem a um mesmo assunto. Aqui está representando a área de contato e agendamento. id="contato" Dá um nome único à seção. Permite criar links diretos como #contato. Ajuda no estilo via CSS e em scripts JS.-->
+      <h2>Contato / Agendamento</h2>
+      <div class="contact-grid">
+        <!-- <form> Elemento de formulário: envia dados das entradas para algum destino (back-end, função JavaScript etc.).
+        id="contactForm". Identifica o formulário. Facilita o uso por JavaScript (ex: pegar valores dos campos).
+        onsubmit="return submitForm(event)". Executa a função submitForm() quando o usuário clica no botão "Enviar".event captura o evento de envio.
+        O return permite: return false → interrompe o envio (ex. para validar)  return true → permite que o formulário envie normalmente
+        Isso significa que o envio só acontece se a função permitir.-->
+        <form id="contactForm" onsubmit="return submitForm(event)">
+          <label>Nome
+            <input type="text" name="name" required placeholder="Seu nome">
+          </label>
+          <label>Telefone
+            <input type="tel" name="phone" required placeholder="(00) 90000-0000">
+          </label>
+          <label>Serviço desejado
+            <!--Por que usar select? Lista fechada → evita erros de digitação. Facilita organização e filtragem no sistema.-->
+            <select name="service">
+              <option>Corte</option>
+              <option>Coloração</option>
+              <option>Tratamento</option>
+              <option>Penteado</option>
+            </select>
+          </label>
+          <label>Data e horário
+            <input type="datetime-local" name="datetime">
+          </label>
+          <label>Mensagem
+            <textarea name="message" rows="3" placeholder="Detalhes adicionais (opcional)"></textarea>
+          </label>
+          <button type="submit">Enviar pedido</button>
+        </form>
+
+        <aside class="card"> <!--<aside> é uma tag usada para conteúdo complementar, algo que aparece ao lado do conteúdo principal. Aqui usamos: contatos e localização. Class="card" Aplica um estilo visual (geralmente caixa com borda, sombra, espaçamento). Essa classe depende do CSS que estou usando.-->
+          <h3>Outras formas</h3>
+          <!--class="muted" Significa texto com estilo mais suave (cor mais clara, menor destaque).-->
+          <p class="muted">WhatsApp: (66) 99231-7646</p>
+          <p class="muted">Instagram: <a href="https://www.instagram.com/lidia_amaral_oficial?igsh=MWJsdGd0OGNsYmRy&utm_source=qr">@lidiaamaral</a></p>
+          <div style="margin-top:1rem"> <!--Div que agrupa a seção "Localização". Adiciona espaço acima do bloco. Usamos para separar visualmente da seção anterior.-->
+            <h3>Localização</h3>
+            <div class="muted"> <!--Usamos para deixar o texto mais fraco e padronizar o estilo. Aqui está servindo como contêiner do mapa.-->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.306421651787!2d-52.166144526051966!3d-14.059074282623573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x936db7837fcd5835%3A0x2ecd66571f451978!2sMorena%20Rosa%20Art%20%26%20Beleza!5e0!3m2!1spt-BR!2sbr!4v1763381108132!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  
+  <footer> <!-- A tag <footer> representa o rodapé da página.
+É uma tag semântica do HTML5 — ajuda na organização e acessibilidade. -->
+    <div class="container center"> <!--Div externa com classes.Essa <div> é usada para organizar o conteúdo dentro do rodapé. Ela tem duas classes: container → geralmente define largura máxima, centralização e margem automática (no CSS). center → provavelmente centraliza o texto (text-align: center;). Essa combinação faz o footer ficar organizado e centralizado. -->
+      <div>© <strong>Lidia Amaral</strong> — Todos os direitos reservados</div> <!--Primeira linha do rodapé. Essa linha mostra: Símbolo © (copyright) O nome da proprietária do site: Lidia Amaral. A frase “Todos os direitos reservados” A tag <strong> deixa o nome em negrito, destacando quem é a dona do conteúdo.-->
+      <div style="margin-top:0.5rem" class="muted">Desenvolvido por Raymora Katielle</div> 
+      <!--Segunda linha: crédito da desenvolvedora.
+          <div> Uma segunda linha no footer.
+          style="margin-top:0.5rem" Um estilo direto que adiciona uma margem superior de 0.5 rem. Isso cria um espaço entre a primeira e a segunda linha. 
+          class="muted" Classe usada para deixar o texto mais “apagado”, suave, normalmente em um cinza claro.  
+          No CSS está assim: .muted {color: #777;font-size: 0.9rem;} -->
+    </div>
+  </footer>
+
+  <script> //Inicia um bloco de JavaScript.
+    // menu mobile - esse código controla o menu para celular.
+    const btn = document.querySelector('.menu-toggle'); //Capturando o botão do menu.Aqui procuramos no HTML o elemento com a classe .menu-toggle, que é o botão de hamburguer (☰). Isso armazena o botão na variável btn.
+    const menu = document.getElementById('main-menu'); //Capturando o menu principal. Pega o elemento que tem id main-menu, que contém os links do menu.Nesse caso o menu tradicional (desktop), mas não utilizado diretamente no mobile.
+    btn?.addEventListener('click', ()=>{ //Adicionando evento de clique ao botão. O btn? significa:"Se o botão existir, então adicione um evento de clique." Isso evita erros caso o botão não exista. Quando o usuário clica nele, executa a função ()=>{ ... }. 
+      const open = btn.getAttribute('aria-expanded') === 'true'; //Verificando se o menu está aberto. O atributo aria-expanded serve para acessibilidade. Aqui ele verifica se o menu está aberto ('true') ou fechado ('false').
+      btn.setAttribute('aria-expanded', String(!open)); //Alternando o valor. Se estava aberto, fecha. Se estava fechado, abre. String(!open) transforma o valor em string, necessário para HTML.
+      if(!open){ //Abrindo o menu (caso estivesse fechado). Se antes estava fechado, execute essa parte.
+        const div = document.createElement('div'); //Criando a div que vai virar o menu mobile. Cria uma <div> pelo JavaScript. Essa div será o menu que aparece na tela.
+        div.className = 'menu-open'; //Definindo a classe da div. Coloca a classe menu-open, para aplicar o CSS mobile.
+        div.innerHTML = `<ul style="list-style:none;padding:0;margin:0;display:flex; flex-direction:column;gap:0.5rem">
+          <li><a href='#servicos'>Serviços</a></li>
+          <li><a href='#galeria'>Galeria</a></li>
+          <li><a href='#sobre'>Sobre</a></li>
+          <li><a href='#contato' class='cta'>Agende</a></li>
+          </ul>`; //Inserindo o HTML interno (lista do menu). Aqui criamos os links do menu já organizados em coluna. Isso será exibido quando o menu abrir.
+        document.body.appendChild(div); //Adicionando o menu ao final do body. Coloca o menu no final da página, como um popup.
+        btn._menuEl = div; //Guardando a div dentro do botão. Aqui estamos salvando o elemento do menu dentro do próprio botão. Isso facilita remover o menu depois.
+      } else {
+        if(btn._menuEl) btn._menuEl.remove(); //Fechando o menu (caso estivesse aberto). Se o menu estava aberto, essa parte apaga a div (remove()), fechando o 
+        // menu.
+      }
+    }) //Fecha o addEventListener.
+
+    // envio do formulário (simulação)
+    // Aqui definimos uma função chamada submitForm, que será executada quando o formulário for enviado.
+    // Essa linha e.preventDefault impede que o formulário recarregue a página (comportamento padrão de formulários HTML). Serve para você tratar o envio manualmente, sem sair da página.
+    //Pegando o formulário enviado e.target é o próprio formulário. Então f passa a representar os campos dele.
+    //Criando o objeto data. Aqui criamos um objeto JavaScript chamado data, contendo todos os valores digitados no formulário. Cada linha pega o valor de um campo:
+
+    function submitForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const data = {
+        nome: f.name.value, //nome
+        telefone: f.phone.value, //telefone
+        servico: f.service.value, //serviço escolhido
+        datetime: f.datetime.value, //data e hora
+        mensagem: f.message.value //mensagem opcional
+      };
+      //Exibindo os dados no alerta, aqui você pode integrar com backend, Google Sheets, ou enviar por email, Mas atualmente é apenas uma simulação.
+      // alert() exibe uma caixa pop-up no navegador. \n significa quebra de linha.
+      alert('Pedido enviado!\nNome: '+data.nome+'\nServiço: '+data.servico+'\nEntraremos em contato.');
+      f.reset(); //Limpando o formulário. Isso limpa todos os campos após o envio.
+      return false; //Retornando false. Isso reforça que o envio padrão (que recarrega a página) não deve acontecer.
+    }
+  </script>
+</body>
+</html>
+
+</body>
+</html>
