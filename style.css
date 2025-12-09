@@ -301,3 +301,17 @@ footer {
   color: var(--primary);
   font-weight: 700;
 }
+/* CORREÇÃO DEFINITIVA DO ESPAÇO EM CIMA DA HERO */
+.container {
+  padding-top: 0 !important;
+}
+
+main.container {
+  padding-top: 0 !important;
+}
+
+.hero {
+  padding-top: 1rem !important;
+  margin-top: 0 !important;
+}
+/* FIM DA CORREÇÃO DO ESPAÇO EM CIMA DA HERO */
