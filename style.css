@@ -115,7 +115,7 @@ nav ul {
 
 /* Galeria no desktop */
 .gallery img {
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
@@ -124,7 +124,7 @@ nav ul {
 /* === GALERIA AJUSTADA PARA DESKTOP (sem alterar celular) === */
 @media (min-width: 900px) {
   .gallery img {
-    width: 100%;
+    width: 50%;
     height: 240px;  
     object-fit: cover;
     border-radius: 8px;
