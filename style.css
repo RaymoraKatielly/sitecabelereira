@@ -1,10 +1,14 @@
 /* ============================================================
    ARQUIVO: style.css
    Função: Estilização completa do site da Cabeleireira Lidia Amaral
-   Observação: Mantida a paleta de cores e o design original
    ============================================================ */
 
 /* ---------- VARIÁVEIS GERAIS (cores, tamanhos, fontes) ---------- */
+
+html, body {
+  overflow-x: hidden; /* impede rolagem lateral */
+}
+
 :root {
   --primary:#c97b6b; /* tom de salmão/rosa queimado */
   --dark:#222;
@@ -91,24 +95,24 @@ nav ul {
    HERO (primeira seção: apresentação + card lateral)
    ============================================================ */
 .hero {
-  display:grid;
-  grid-template-columns:1fr 420px;
-  gap:2rem;
-  align-items:center;
-  padding:3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0;
 }
 
-.hero h1 {
-  font-family:'Playfair Display';
-  font-size:2.1rem;
+/* CORREÇÃO PARA CELULAR */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr; /* fica uma coluna só */
+  }
+
+  aside.card {
+    margin-top: 1.5rem; /* evita colar no texto */
+  }
 }
 
-.card {
-  background:white;
-  border-radius:var(--radius);
-  padding:1.25rem;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
-}
 
 /* ============================================================
    SEÇÕES GERAIS
@@ -140,9 +144,10 @@ h2 { margin-bottom:0.8rem; }
 }
 
 /* ---------- GALERIA DE IMAGENS ---------- */
-.gallery {
-  grid-template-columns:repeat(3,1fr);
-  gap:0.7rem;
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ---------- CONTATO / FORMULÁRIO ---------- */
