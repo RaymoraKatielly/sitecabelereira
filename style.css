@@ -28,7 +28,7 @@ body {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; border-radius: 8px; }
 
-/* container sem padding vertical (evita espaço gigante no topo) */
+/* container sem padding vertical (remove espaço gigante no topo) */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -100,8 +100,12 @@ nav ul {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 2rem;
-  padding-top: 1rem;  
+
+  /* CORREÇÃO DO ESPAÇO */
+  padding-top: 0 !important;
   padding-bottom: 2rem;
+  margin-top: 0 !important;
+
   align-items: center;
 }
 
@@ -126,12 +130,13 @@ nav ul {
 
 /* ======================== SEÇÕES ======================== */
 
+/* CORREÇÃO DO ESPAÇAMENTO ENTRE AS SEÇÕES */
 section {
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   padding-bottom: 1.5rem;
 }
 
-/* redução de espaço antes dos serviços */
+/* pequenos ajustes */
 #servicos {
   padding-top: 0.5rem;
 }
@@ -179,18 +184,19 @@ h2 {
 
 /* ======================== GALERIA ======================== */
 
-/* desktop: corte leve, sem cortar o rosto */
+/* layout base */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: .7rem;
 }
 
+/* CORREÇÃO DO CORTE EXAGERADO */
 @media (min-width:900px) {
   .gallery img {
-    height: 220px;         
+    height: 260px;         /* altura ajustada */
     object-fit: cover;     
-    object-position: top;  
+    object-position: top center; /* evita cortar o rosto */
     width: 100%;
   }
 }
