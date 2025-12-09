@@ -301,17 +301,19 @@ footer {
   color: var(--primary);
   font-weight: 700;
 }
-/* CORREÇÃO DEFINITIVA DO ESPAÇO EM CIMA DA HERO */
+/* ===== AJUSTE FINO DA HERO (tira o espaço que sobrou) ===== */
+
+/* puxa a hero um pouco pra cima, sem mexer no resto */
+.hero {
+  margin-top: -1.5rem !important;  /* se achar muito, troca pra -1rem */
+}
+
+/* garante que o container não coloque espaço extra em cima */
 .container {
   padding-top: 0 !important;
 }
 
-main.container {
-  padding-top: 0 !important;
+/* só pra não grudar demais a frase na barra */
+.hero .pill {
+  margin-top: 0.5rem;
 }
-
-.hero {
-  padding-top: 1rem !important;
-  margin-top: 0 !important;
-}
-/* FIM DA CORREÇÃO DO ESPAÇO EM CIMA DA HERO */
