@@ -1,20 +1,11 @@
-/* ============================================================
-   ARQUIVO: style.css
-   Função: Estilização completa do site da Cabeleireira Lidia Amaral
-   ============================================================ */
+/* ======================== CONFIGURAÇÕES GERAIS ======================== */
 
-/* ============================================================
-   CONFIGURAÇÕES GERAIS
-   ============================================================ */
-
-/* Evita rolagem lateral em qualquer dispositivo */
 html, body {
-  overflow-x: hidden;
+  overflow-x: hidden; /* evita rolagem lateral */
 }
 
-/* Variáveis globais (cores, espaçamentos, tipografia) */
 :root {
-  --primary:#c97b6b; /* tom de salmão/rosa queimado */
+  --primary:#c97b6b;
   --dark:#222;
   --muted:#666;
   --bg:#fff;
@@ -24,9 +15,9 @@ html, body {
   font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto;
 }
 
-/* Reset básico */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
+
 body {
   margin: 0;
   background: #fff;
@@ -37,15 +28,15 @@ body {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; border-radius: 8px; }
 
+/* Container alinhado sem criar espaços verticais extras */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem; /* padding apenas lateral */
 }
 
-/* ============================================================
-   HEADER — Cabeçalho (logo + navegação)
-   ============================================================ */
+
+/* ======================== HEADER ======================== */
 
 header {
   background: #fff;
@@ -68,7 +59,7 @@ header {
   gap: .75rem;
 }
 
-.brand .logo {
+.logo {
   width: 48px;
   height: 48px;
   background: linear-gradient(135deg, var(--primary), #a65f50);
@@ -102,29 +93,29 @@ nav ul {
   font-size: 1.3rem;
 }
 
-/* ============================================================
-   HERO — Primeira seção principal
-   ============================================================ */
+
+/* ======================== HERO ======================== */
 
 .hero {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 2rem;
   align-items: center;
-  padding: 3rem 0;
+  padding-top: 1rem;  /* reduz espaço superior */
+  padding-bottom: 2rem;
 }
 
-/* HERO no celular */
+/* Ajusta para tela pequena */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
   }
+
   .hero aside.card {
     margin-top: 1.5rem;
   }
 }
 
-/* Card lateral da HERO */
 .card {
   background: #fff;
   border-radius: var(--radius);
@@ -132,21 +123,40 @@ nav ul {
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-/* ============================================================
-   SEÇÕES GERAIS
-   ============================================================ */
 
-section { padding: 2rem 0; }
-h2 { margin-bottom: .8rem; }
+/* ======================== SEÇÕES ======================== */
+
+section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  margin-bottom: .8rem;
+}
 
 .grid {
   display: grid;
   gap: var(--gap);
 }
 
-/* Serviços */
+
+/* ======================== SERVIÇOS ======================== */
+
 .services {
   grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width:980px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:680px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service {
@@ -161,48 +171,44 @@ h2 { margin-bottom: .8rem; }
   color: var(--primary);
 }
 
-/* ============================================================
-   GALERIA — Correção completa da responsividade
-   ============================================================ */
 
-/* DESKTOP — 3 colunas padronizadas */
+/* ======================== GALERIA ======================== */
+
 .gallery {
-  display: grid;           
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.7rem;
+  gap: .7rem;
 }
 
-/* IMAGENS — padrão */
-.gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* DESKTOP — controla a altura */
-@media (min-width: 900px) {
+/* Cortes leves e imagens alinhadas — opção escolhida */
+@media (min-width:900px) {
   .gallery img {
-    height: 240px !important;   /* ajusta para tamanho ideal */
+    height: 260px;         /* altura equilibrada */
+    object-fit: cover;     /* corta suavemente mantendo estética */
+    width: 100%;
   }
 }
 
-/* CELULAR — 2 colunas */
-@media (max-width: 680px) {
+/* Celular — duas colunas */
+@media (max-width:680px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
-/* ============================================================
-   CONTATO / FORMULÁRIO
-   ============================================================ */
+
+/* ======================== CONTATO ======================== */
 
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 1.25rem;
+}
+
+@media (max-width:980px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 input, textarea, select, button {
@@ -220,9 +226,8 @@ button {
   cursor: pointer;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+
+/* ======================== FOOTER ======================== */
 
 footer {
   padding: 1.5rem 0;
@@ -231,49 +236,40 @@ footer {
   color: var(--muted);
 }
 
-/* ============================================================
-   RESPONSIVIDADE GLOBAL
-   ============================================================ */
 
-@media (max-width: 980px) {
-  .services { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid { grid-template-columns: 1fr; }
-}
+/* ======================== MOBILE MENU ======================== */
 
-@media (max-width: 680px) {
-  .menu-toggle { display: block; }
-  nav ul { display: none; }
+@media (max-width:680px) {
+  .menu-toggle {
+    display: block;
+  }
 
-  .services { grid-template-columns: 1fr; }
-
-  /* Galeria em 2 colunas no celular */
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
+  nav ul {
+    display: none;
   }
 
   .menu-open {
     position: absolute;
     right: 1rem;
     top: 64px;
-    background: #fff;
+    background: white;
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   }
 }
 
-/* ============================================================
-   UTILITÁRIOS
-   ============================================================ */
+
+/* ======================== UTILITÁRIOS ======================== */
 
 .muted { color: var(--muted); }
 .center { text-align: center; }
 
 .pill {
-  display:inline-block;
+  display: inline-block;
   padding: .25rem .7rem;
-  border-radius:999px;
-  background:rgba(201,123,107,0.1);
-  color:var(--primary);
-  font-weight:700;
+  border-radius: 999px;
+  background: rgba(201,123,107,0.1);
+  color: var(--primary);
+  font-weight: 700;
 }
