@@ -120,10 +120,13 @@ nav ul {
   object-fit: cover;
   border-radius: 8px;
 }
-/* Controle de tamanho no computador */
+/* ==== GALERIA - TAMANHO CONTROLADO NO COMPUTADOR ==== */
 @media (min-width: 900px) {
   .gallery img {
-    height: 260px; /* você pode ajustar para 220, 240, 280… */
+    height: 240px;      /* tamanho ideal */
+    object-fit: cover;  /* corta a imagem sem distorcer */
+    width: 100%;
+    border-radius: 8px;
   }
 }
 
