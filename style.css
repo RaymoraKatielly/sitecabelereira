@@ -1,7 +1,7 @@
 /* ======================== CONFIGURAÇÕES GERAIS ======================== */
 
 html, body {
-  overflow-x: hidden; /* evita rolagem lateral */
+  overflow-x: hidden;
 }
 
 :root {
@@ -28,13 +28,12 @@ body {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; border-radius: 8px; }
 
-/* Container alinhado sem criar espaços verticais extras */
+/* Evita espaço gigante acima da hero */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem; /* padding apenas lateral */
+  padding: 0 2rem;
 }
-
 
 /* ======================== HEADER ======================== */
 
@@ -93,19 +92,18 @@ nav ul {
   font-size: 1.3rem;
 }
 
-
 /* ======================== HERO ======================== */
 
 .hero {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 2rem;
-  align-items: center;
-  padding-top: 1rem;  /* reduz espaço superior */
+  padding-top: 1rem;   
   padding-bottom: 2rem;
+  align-items: center;
 }
 
-/* Ajusta para tela pequena */
+/* Ajuste para telas menores */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -123,7 +121,6 @@ nav ul {
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-
 /* ======================== SEÇÕES ======================== */
 
 section {
@@ -139,7 +136,6 @@ h2 {
   display: grid;
   gap: var(--gap);
 }
-
 
 /* ======================== SERVIÇOS ======================== */
 
@@ -171,7 +167,6 @@ h2 {
   color: var(--primary);
 }
 
-
 /* ======================== GALERIA ======================== */
 
 .gallery {
@@ -180,22 +175,20 @@ h2 {
   gap: .7rem;
 }
 
-/* Cortes leves e imagens alinhadas — opção escolhida */
+/* Escolha C — corte leve e bonito */
 @media (min-width:900px) {
   .gallery img {
-    height: 260px;         /* altura equilibrada */
-    object-fit: cover;     /* corta suavemente mantendo estética */
+    height: 260px;
+    object-fit: cover;
     width: 100%;
   }
 }
 
-/* Celular — duas colunas */
 @media (max-width:680px) {
   .gallery {
     grid-template-columns: repeat(2,1fr);
   }
 }
-
 
 /* ======================== CONTATO ======================== */
 
@@ -226,7 +219,6 @@ button {
   cursor: pointer;
 }
 
-
 /* ======================== FOOTER ======================== */
 
 footer {
@@ -235,7 +227,6 @@ footer {
   font-size: .9rem;
   color: var(--muted);
 }
-
 
 /* ======================== MOBILE MENU ======================== */
 
@@ -258,7 +249,6 @@ footer {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   }
 }
-
 
 /* ======================== UTILITÁRIOS ======================== */
 
