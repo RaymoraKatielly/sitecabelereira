@@ -1,4 +1,6 @@
-/* ======================== CONFIGURAÇÕES GERAIS ======================== */
+/* ========================
+   CONFIGURAÇÕES GERAIS
+   ======================== */
 
 html, body {
   overflow-x: hidden;
@@ -28,7 +30,7 @@ body {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; border-radius: 8px; }
 
-/* container sem padding vertical (remove espaço gigante no topo) */
+/* container sem espaçamento vertical */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -36,7 +38,9 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 }
 
 
-/* ======================== HEADER ======================== */
+/* ========================
+   HEADER
+   ======================== */
 
 header {
   background: #fff;
@@ -94,18 +98,20 @@ nav ul {
 }
 
 
-/* ======================== HERO ======================== */
+/* ========================
+   HERO
+   ======================== */
 
 .hero {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 2rem;
 
-  /* CORREÇÃO DO ESPAÇO */
+  /* correção de espaçamento */
   padding-top: 0 !important;
-  padding-bottom: 2rem;
   margin-top: 0 !important;
 
+  padding-bottom: 2rem;
   align-items: center;
 }
 
@@ -128,17 +134,17 @@ nav ul {
 }
 
 
-/* ======================== SEÇÕES ======================== */
+/* ========================
+   SEÇÕES
+   ======================== */
 
-/* CORREÇÃO DO ESPAÇAMENTO ENTRE AS SEÇÕES */
 section {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
 }
 
-/* pequenos ajustes */
 #servicos {
-  padding-top: 0.5rem;
+  padding-top: .5rem; /* melhora transição hero → serviços */
 }
 
 h2 {
@@ -151,7 +157,9 @@ h2 {
 }
 
 
-/* ======================== SERVIÇOS ======================== */
+/* ========================
+   SERVIÇOS
+   ======================== */
 
 .services {
   grid-template-columns: repeat(3, 1fr);
@@ -182,34 +190,36 @@ h2 {
 }
 
 
-/* ======================== GALERIA ======================== */
+/* ========================
+   GALERIA
+   ======================== */
 
-/* layout base */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: .7rem;
 }
 
-/* CORREÇÃO DO CORTE EXAGERADO */
+/* corte leve e proporcional no desktop */
 @media (min-width:900px) {
   .gallery img {
-    height: 260px;         /* altura ajustada */
-    object-fit: cover;     
-    object-position: top center; /* evita cortar o rosto */
-    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top center;
   }
 }
 
 /* mobile */
 @media (max-width:680px) {
   .gallery {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
-/* ======================== CONTATO ======================== */
+/* ========================
+   CONTATO
+   ======================== */
 
 .contact-grid {
   display: grid;
@@ -239,7 +249,9 @@ button {
 }
 
 
-/* ======================== FOOTER ======================== */
+/* ========================
+   FOOTER
+   ======================== */
 
 footer {
   padding: 1.5rem 0;
@@ -249,7 +261,9 @@ footer {
 }
 
 
-/* ======================== MENU MOBILE ======================== */
+/* ========================
+   MENU MOBILE
+   ======================== */
 
 @media (max-width:680px) {
   .menu-toggle {
@@ -272,7 +286,9 @@ footer {
 }
 
 
-/* ======================== UTILITÁRIOS ======================== */
+/* ========================
+   UTILITÁRIOS
+   ======================== */
 
 .muted { color: var(--muted); }
 .center { text-align: center; }
