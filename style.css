@@ -1,0 +1,213 @@
+/* ============================================================
+   ARQUIVO: style.css
+   Função: Estilização completa do site da Cabeleireira Lidia Amaral
+   Observação: Mantida a paleta de cores e o design original
+   ============================================================ */
+
+/* ---------- VARIÁVEIS GERAIS (cores, tamanhos, fontes) ---------- */
+:root {
+  --primary:#c97b6b; /* tom de salmão/rosa queimado */
+  --dark:#222;
+  --muted:#666;
+  --bg:#fff;
+  --radius:12px;
+  --max-width:1100px;
+  --gap:1.25rem;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto;
+}
+
+/* ---------- RESET E CONFIGURAÇÕES BÁSICAS ---------- */
+* { box-sizing:border-box; }
+html,body { height:100%; }
+body {
+  margin:0;
+  background:#fff;
+  color:var(--dark);
+  line-height:1.45;
+}
+a { text-decoration:none; color:inherit; }
+img { max-width:100%; display:block; border-radius:8px; }
+.container { max-width:var(--max-width); margin:0 auto; padding:2rem; }
+
+/* ============================================================
+   HEADER (cabeçalho fixo com logo + menu)
+   ============================================================ */
+header {
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:40;
+  box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+.nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0.75rem 1rem;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+}
+
+.brand .logo {
+  width:48px;
+  height:48px;
+  background:linear-gradient(135deg,var(--primary),#a65f50);
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+  font-family:'Playfair Display';
+}
+
+nav ul {
+  display:flex;
+  list-style:none;
+  gap:1rem;
+}
+
+.cta {
+  background:var(--primary);
+  color:white;
+  padding:0.55rem 0.9rem;
+  border-radius:10px;
+  font-weight:600;
+}
+
+.menu-toggle {
+  display:none;
+  background:none;
+  border:0;
+  font-size:1.3rem;
+}
+
+/* ============================================================
+   HERO (primeira seção: apresentação + card lateral)
+   ============================================================ */
+.hero {
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:2rem;
+  align-items:center;
+  padding:3rem 0;
+}
+
+.hero h1 {
+  font-family:'Playfair Display';
+  font-size:2.1rem;
+}
+
+.card {
+  background:white;
+  border-radius:var(--radius);
+  padding:1.25rem;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* ============================================================
+   SEÇÕES GERAIS
+   ============================================================ */
+section { padding:2rem 0; }
+h2 { margin-bottom:0.8rem; }
+
+/* ---------- GRID GERAL ---------- */
+.grid {
+  display:grid;
+  gap:var(--gap);
+}
+
+/* ---------- SERVIÇOS ---------- */
+.services {
+  grid-template-columns:repeat(3,1fr);
+}
+
+.service {
+  background:#fff;
+  padding:1rem;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+}
+
+.price {
+  font-weight:700;
+  color:var(--primary);
+}
+
+/* ---------- GALERIA DE IMAGENS ---------- */
+.gallery {
+  grid-template-columns:repeat(3,1fr);
+  gap:0.7rem;
+}
+
+/* ---------- CONTATO / FORMULÁRIO ---------- */
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:1.25rem;
+}
+
+input, textarea, select, button {
+  padding:0.7rem;
+  border-radius:10px;
+  border:1px solid #e6e6e6;
+  font-size:0.95rem;
+}
+
+button {
+  background:var(--primary);
+  color:white;
+  font-weight:600;
+  border:0;
+  cursor:pointer;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding:1.5rem 0;
+  text-align:center;
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+@media (max-width:980px) {
+  .hero { grid-template-columns:1fr; }
+  .contact-grid { grid-template-columns:1fr; }
+  .services { grid-template-columns:repeat(2,1fr); }
+}
+
+@media (max-width:680px) {
+  .menu-toggle { display:block; }
+  nav ul { display:none; }
+  .services { grid-template-columns:1fr; }
+  .gallery { grid-template-columns:repeat(2,1fr); }
+  .menu-open {
+    position:absolute;
+    right:1rem;
+    top:64px;
+    background:white;
+    padding:1rem;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  }
+}
+
+/* ---------- CLASSES UTILITÁRIAS ---------- */
+.muted { color:var(--muted); }
+.center { text-align:center; }
+.pill {
+  display:inline-block;
+  padding:0.25rem 0.7rem;
+  border-radius:999px;
+  background:rgba(201,123,107,0.1);
+  color:var(--primary);
+  font-weight:700;
+}
