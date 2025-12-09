@@ -28,12 +28,13 @@ body {
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; border-radius: 8px; }
 
-/* Evita espaço gigante acima da hero */
+/* container sem padding vertical (evita espaço gigante no topo) */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
 }
+
 
 /* ======================== HEADER ======================== */
 
@@ -92,18 +93,19 @@ nav ul {
   font-size: 1.3rem;
 }
 
+
 /* ======================== HERO ======================== */
 
 .hero {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 2rem;
-  padding-top: 1rem;   
+  padding-top: 1rem;  
   padding-bottom: 2rem;
   align-items: center;
 }
 
-/* Ajuste para telas menores */
+/* mobile */
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
@@ -121,11 +123,17 @@ nav ul {
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
+
 /* ======================== SEÇÕES ======================== */
 
 section {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+/* redução de espaço antes dos serviços */
+#servicos {
+  padding-top: 0.5rem;
 }
 
 h2 {
@@ -136,6 +144,7 @@ h2 {
   display: grid;
   gap: var(--gap);
 }
+
 
 /* ======================== SERVIÇOS ======================== */
 
@@ -167,28 +176,32 @@ h2 {
   color: var(--primary);
 }
 
+
 /* ======================== GALERIA ======================== */
 
+/* desktop: corte leve, sem cortar o rosto */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: .7rem;
 }
 
-/* Escolha C — corte leve e bonito */
 @media (min-width:900px) {
   .gallery img {
-    height: 260px;
-    object-fit: cover;
+    height: 220px;         
+    object-fit: cover;     
+    object-position: top;  
     width: 100%;
   }
 }
 
+/* mobile */
 @media (max-width:680px) {
   .gallery {
     grid-template-columns: repeat(2,1fr);
   }
 }
+
 
 /* ======================== CONTATO ======================== */
 
@@ -219,6 +232,7 @@ button {
   cursor: pointer;
 }
 
+
 /* ======================== FOOTER ======================== */
 
 footer {
@@ -228,7 +242,8 @@ footer {
   color: var(--muted);
 }
 
-/* ======================== MOBILE MENU ======================== */
+
+/* ======================== MENU MOBILE ======================== */
 
 @media (max-width:680px) {
   .menu-toggle {
@@ -249,6 +264,7 @@ footer {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   }
 }
+
 
 /* ======================== UTILITÁRIOS ======================== */
 
