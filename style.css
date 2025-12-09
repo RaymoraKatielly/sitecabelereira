@@ -162,30 +162,36 @@ h2 { margin-bottom: .8rem; }
 }
 
 /* ============================================================
-   GALERIA (PORTFÓLIO)
+   GALERIA — Correção completa da responsividade
    ============================================================ */
 
-/* Configuração geral da galeria */
+/* DESKTOP — 3 colunas padronizadas */
 .gallery {
+  display: grid;           
   grid-template-columns: repeat(3, 1fr);
   gap: 0.7rem;
 }
 
-/* Padrão das imagens (celular e tablet) */
+/* IMAGENS — padrão */
 .gallery img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   display: block;
   object-fit: cover;
+  border-radius: 8px;
 }
 
-/* Ajuste DEFINITIVO para desktop (sem imagens gigantes) */
+/* DESKTOP — controla a altura */
 @media (min-width: 900px) {
   .gallery img {
-    height: 240px !important;    /* altura controlada */
-    width: 100% !important;
-    object-fit: cover !important;
+    height: 240px !important;   /* ajusta para tamanho ideal */
+  }
+}
+
+/* CELULAR — 2 colunas */
+@media (max-width: 680px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
