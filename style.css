@@ -113,6 +113,19 @@ nav ul {
   }
 }
 
+/* Galeria no desktop */
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* Controle de tamanho no computador */
+@media (min-width: 900px) {
+  .gallery img {
+    height: 260px; /* você pode ajustar para 220, 240, 280… */
+  }
+}
 
 /* ============================================================
    SEÇÕES GERAIS
