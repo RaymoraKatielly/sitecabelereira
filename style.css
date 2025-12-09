@@ -120,15 +120,17 @@ nav ul {
   object-fit: cover;
   border-radius: 8px;
 }
-/* ==== GALERIA - TAMANHO CONTROLADO NO COMPUTADOR ==== */
+/* === GALERIA AJUSTADA PARA DESKTOP (sem alterar celular) === */
 @media (min-width: 900px) {
   .gallery img {
-    height: 240px;      /* tamanho ideal */
-    object-fit: cover;  /* corta a imagem sem distorcer */
     width: 100%;
+    height: 240px;      /* altura ideal para manter estética */
+    object-fit: cover;  /* impede deformar e corta com elegância */
     border-radius: 8px;
+    display: block;
   }
 }
+
 
 /* ============================================================
    SEÇÕES GERAIS
