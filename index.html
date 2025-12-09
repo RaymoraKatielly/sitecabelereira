@@ -2,285 +2,283 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lidia Amaral - Cabeleireira</title>
-    <meta name="description"
-        content="Lidia Amaral — cortes, penteados, escova e tratamentos. Agende seu horário!">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lidia Amaral - Cabeleireira</title>
+  <meta name="description" content="Lidia Amaral — cortes, penteados, escova e tratamentos. Agende seu horário!">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
-        rel="stylesheet">
+  <!-- Importação das fontes usadas no site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&
+      family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="style.css?v=10">
+  <!-- Importação do arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css?v=20">
 </head>
 
 <body>
 
-    <!-- ============================================================
-         HEADER — Cabeçalho fixo com logo e navegação
-    ============================================================ -->
-    <header>
-        <div class="container nav">
+  <!-- ============================================================
+       HEADER — Cabeçalho com logo e menu de navegação
+  ============================================================ -->
+  <header>
+    <div class="container nav">
 
-            <!-- Logo + nome -->
-            <div class="brand">
-                <div class="logo">LA</div>
-                <div>
-                    <div style="font-weight:700;">Lidia Amaral</div>
-                    <div class="muted" style="font-size:.85rem;">Cortes • Penteados • Tratamentos</div>
-                </div>
-            </div>
-
-            <!-- Menu -->
-            <nav>
-                <button class="menu-toggle" aria-expanded="false">☰</button>
-                <ul id="main-menu">
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato" class="cta">Agende</a></li>
-                </ul>
-            </nav>
-
+      <!-- Marca da cabeleireira -->
+      <div class="brand">
+        <div class="logo">LA</div>
+        <div>
+          <div style="font-weight:700">Lidia Amaral</div>
+          <div class="muted" style="font-size:0.85rem">Cortes • Penteados • Tratamentos</div>
         </div>
-    </header>
+      </div>
+
+      <!-- Menu -->
+      <nav>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">☰</button>
+
+        <ul id="main-menu">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato" class="cta">Agende</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       MAIN — Conteúdo principal
+  ============================================================ -->
+  <main class="container">
 
     <!-- ============================================================
-         MAIN — Conteúdo principal do site
+         HERO — Seção principal com apresentação + card lateral
     ============================================================ -->
-    <main class="container">
+    <section class="hero">
 
-        <!-- ============================================================
-             HERO — Seção inicial com chamada e card lateral
-        ============================================================ -->
-        <section class="hero">
+      <!-- Texto principal -->
+      <div>
+        <span class="pill">Atendimento com hora marcada</span>
 
-            <!-- Texto da esquerda -->
+        <h1>Transforme o seu visual comigo</h1>
+
+        <p class="lead muted">
+          Profissional experiente em cortes, escovas, tratamentos e penteados para ocasiões especiais.
+        </p>
+
+        <!-- Botões de ação -->
+        <div style="display:flex; gap:0.8rem; margin-top:1rem">
+          <a href="#contato" class="cta">Agendar agora</a>
+          <a href="#servicos" style="border:1px solid #eee; padding:0.55rem 0.9rem; border-radius:10px;">
+            Ver serviços
+          </a>
+        </div>
+      </div>
+
+      <!-- Card lateral com horários, telefone e endereço -->
+      <aside class="card">
+        <img src="fotos/fotodacapa.jpeg" alt="Cabeleireira ao trabalho">
+
+        <div style="margin-top:0.8rem">
+
+          <div style="display:flex; justify-content:space-between; align-items:center">
             <div>
-                <span class="pill">Atendimento com hora marcada</span>
-
-                <h1>Transforme o seu visual comigo</h1>
-
-                <p class="lead muted">
-                    Profissional experiente em cortes, escovas, tratamentos e penteados para ocasiões especiais.
-                </p>
-
-                <!-- Botões -->
-                <div style="display:flex; gap:.8rem; margin-top:1rem;">
-                    <a href="#contato" class="cta">Agendar agora</a>
-                    <a href="#servicos" style="border:1px solid #eee; padding:.55rem .9rem; border-radius:10px;">
-                        Ver serviços
-                    </a>
-                </div>
+              <div style="font-weight:700">Aberto: Seg–Sáb</div>
+              <div class="hours muted">07:00 — 19:00</div>
             </div>
 
-            <!-- Card lateral da HERO -->
-            <aside class="card">
-                <img src="fotos/fotodacapa.jpeg" alt="Cabeleireira Lidia Amaral ao trabalho">
-
-                <div style="margin-top:.8rem;">
-
-                    <div style="display:flex; justify-content:space-between;">
-                        <div>
-                            <strong>Aberto: Seg–Sáb</strong>
-                            <div class="muted">07:00 — 19:00</div>
-                        </div>
-
-                        <div style="text-align:right;">
-                            <div class="muted">Telefone</div>
-                            <strong>(66) 99231-7646</strong>
-                        </div>
-                    </div>
-
-                    <p style="margin-top:1rem;">
-                        Endereço: Av. Júlio Campos, R. Onze, 293 - Operário, Água Boa - MT
-                    </p>
-
-                </div>
-            </aside>
-
-        </section> <!-- Fim da HERO -->
-
-        <!-- ============================================================
-             SERVIÇOS — Agora corretamente FORA da HERO
-        ============================================================ -->
-        <section id="servicos" style="margin-top:2rem;">
-            <h2>Pacotes para Noiva Civil</h2>
-
-            <div class="grid services">
-
-                <!-- Pacote Essencial -->
-                <article class="service">
-                    <h3>Pacote Essencial</h3>
-                    <ul class="muted" style="margin-left:1rem; list-style:disc;">
-                        <li>Preparação de penteado</li>
-                        <li>Penteado</li>
-                        <li>Aplicação de acessórios</li>
-                        <li>Finalização de longa duração</li>
-                    </ul>
-                    <span class="price">R$ 300,00</span>
-                </article>
-
-                <!-- Pacote Elegance -->
-                <article class="service">
-                    <h3>Pacote Elegance</h3>
-                    <ul class="muted" style="margin-left:1rem; list-style:disc;">
-                        <li>Sala exclusiva</li>
-                        <li>Preparação de penteado</li>
-                        <li>Penteado</li>
-                        <li>Aplicação de acessórios</li>
-                        <li>Finalização de longa duração</li>
-                    </ul>
-                    <span class="price">R$ 500,00</span>
-                </article>
-
+            <div style="text-align:right">
+              <div class="muted">Telefone</div>
+              <div style="font-weight:700">(66) 99231-7646</div>
             </div>
+          </div>
 
-            <p class="muted" style="margin-top:1rem;">
-                Valores incluem somente o penteado.<br>
-                A noiva pode contratar maquiador de sua preferência.<br>
-                Pacotes exclusivos para noiva civil, sem teste de penteado.
-            </p>
-        </section>
-
-        <!-- ============================================================
-             SOBRE MIM
-        ============================================================ -->
-        <section id="sobre">
-            <h2>Sobre mim</h2>
-            <p class="muted">
-                “Movida por desafios e apaixonada por criar, eu, Lidia Amaral, transformo boas ideias em experiências
-                únicas.”
-            </p>
-        </section>
-
-        <!-- ============================================================
-             GALERIA
-        ============================================================ -->
-        <section id="galeria">
-            <h2>Portifólio</h2>
-
-            <div class="grid gallery">
-                <img src="fotos/foto07.jpeg" alt="exemplo 1">
-                <img src="fotos/foto02.jpeg" alt="exemplo 2">
-                <img src="fotos/foto03.jpeg" alt="exemplo 3">
-                <img src="fotos/foto04.jpeg" alt="exemplo 4">
-                <img src="fotos/foto09.jpeg" alt="exemplo 5">
-                <img src="fotos/foto10.jpeg" alt="exemplo 6">
-            </div>
-        </section>
-
-        <!-- ============================================================
-             DEPOIMENTOS
-        ============================================================ -->
-        <section id="depoimentos">
-            <h2>Depoimentos</h2>
-
-            <div class="grid" style="grid-template-columns:repeat(2,1fr);">
-
-                <blockquote class="card">
-                    <p>
-                        "A melhor experiência! Profissionais atenciosos e resultado impecável."
-                    </p>
-                    <footer class="muted">— Júlia, cliente</footer>
-                </blockquote>
-
-                <blockquote class="card">
-                    <p>
-                        "Meu cabelo ficou incrível — super recomendo o tratamento de reconstrução."
-                    </p>
-                    <footer class="muted">— Camila, cliente</footer>
-                </blockquote>
-
-            </div>
-        </section>
-
-        <!-- ============================================================
-             CONTATO / AGENDAMENTO
-        ============================================================ -->
-        <section id="contato">
-            <h2>Contato / Agendamento</h2>
-
-            <div class="contact-grid">
-
-                <!-- Formulário -->
-                <form id="contactForm" onsubmit="return submitForm(event)">
-                    <label>Nome
-                        <input type="text" name="name" required placeholder="Seu nome">
-                    </label>
-
-                    <label>Telefone
-                        <input type="tel" name="phone" required placeholder="(00) 90000-0000">
-                    </label>
-
-                    <label>Serviço desejado
-                        <select name="service">
-                            <option>Corte</option>
-                            <option>Coloração</option>
-                            <option>Tratamento</option>
-                            <option>Penteado</option>
-                        </select>
-                    </label>
-
-                    <label>Data e horário
-                        <input type="datetime-local" name="datetime">
-                    </label>
-
-                    <label>Mensagem
-                        <textarea name="message" rows="3" placeholder="Detalhes adicionais (opcional)"></textarea>
-                    </label>
-
-                    <button type="submit">Enviar pedido</button>
-                </form>
-
-                <!-- Card lateral com WhatsApp, Instagram e mapa -->
-                <aside class="card">
-                    <h3>Outras formas</h3>
-
-                    <p class="muted">WhatsApp: (66) 99231-7646</p>
-                    <p class="muted">
-                        Instagram:
-                        <a href="https://www.instagram.com/lidia_amaral_oficial">@lidiaamaral</a>
-                    </p>
-
-                    <div style="margin-top:1rem;">
-                        <h3>Localização</h3>
-
-                        <div class="muted">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.306421651787!2d-52.166144526051966!3d-14.059074282623573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x936db7837fcd5835%3A0x2ecd66571f451978!2sMorena%20Rosa%20Art%20%26%20Beleza!5e0!3m2!1spt-BR!2sbr!4v1763381108132!5m2!1spt-BR!2sbr"
-                                style="border:0; width:100%; height:350px; max-width:100%;"
-                                loading="lazy"
-                                allowfullscreen
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </div>
-
-                </aside>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ====================================================
-         FOOTER
-    ============================================================ -->
-    <footer>
-        <div class="container center">
-            <div>© <strong>Lidia Amaral</strong> — Todos os direitos reservados</div>
-            <div class="muted" style="margin-top:.5rem;">Desenvolvido por Raymora Katielle</div>
+          <p style="margin-top:1rem">
+            Endereço: Av. Júlio Campos, R. Onze, 293 - Operário, Água Boa - MT
+          </p>
         </div>
-    </footer>
+      </aside>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    </section> <!-- FIM DA HERO -->
+
+
+    <!-- ============================================================
+         SERVIÇOS — (AGORA NO LUGAR CERTO)
+    ============================================================ -->
+    <section id="servicos">
+      <h2>Pacotes para Noiva Civil</h2>
+
+      <div class="grid services">
+
+        <article class="service">
+          <h3>Pacote Essencial</h3>
+          <ul class="muted" style="margin-left:1rem; list-style:disc;">
+            <li>Preparação de penteado</li>
+            <li>Penteado</li>
+            <li>Aplicação de acessórios</li>
+            <li>Finalização de longa duração</li>
+          </ul>
+          <span class="price">R$ 300,00</span>
+        </article>
+
+        <article class="service">
+          <h3>Pacote Elegance</h3>
+          <ul class="muted" style="margin-left:1rem; list-style:disc;">
+            <li>Sala exclusiva</li>
+            <li>Preparação de penteado</li>
+            <li>Penteado</li>
+            <li>Aplicação de acessórios</li>
+            <li>Finalização de longa duração</li>
+          </ul>
+          <span class="price">R$ 500,00</span>
+        </article>
+
+      </div>
+
+      <p class="muted" style="margin-top:1rem">
+        Valores referentes apenas ao serviço de penteado.<br>
+        A noiva pode contratar maquiador de sua preferência.<br>
+        Pacotes exclusivos para noiva civil, sem teste de penteado.
+      </p>
+    </section>
+
+
+    <!-- ============================================================
+         SOBRE MIM
+    ============================================================ -->
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p class="muted">
+        “Movida por desafios e apaixonada por criar, eu, Lidia Amaral, transformo boas ideias em experiências
+        únicas.”
+      </p>
+    </section>
+
+
+    <!-- ============================================================
+         GALERIA
+    ============================================================ -->
+    <section id="galeria">
+      <h2>Portifólio</h2>
+
+      <div class="grid gallery">
+        <img src="fotos/foto07.jpeg" alt="exemplo 1">
+        <img src="fotos/foto02.jpeg" alt="exemplo 2">
+        <img src="fotos/foto03.jpeg" alt="exemplo 3">
+        <img src="fotos/foto04.jpeg" alt="exemplo 4">
+        <img src="fotos/foto09.jpeg" alt="exemplo 5">
+        <img src="fotos/foto10.jpeg" alt="exemplo 6">
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         DEPOIMENTOS
+    ============================================================ -->
+    <section id="depoimentos">
+      <h2>Depoimentos</h2>
+
+      <div class="grid" style="grid-template-columns:repeat(2,1fr);">
+
+        <blockquote class="card">
+          <p>"A melhor experiência! Profissionais atenciosos e resultado impecável."</p>
+          <footer class="muted">— Júlia, cliente</footer>
+        </blockquote>
+
+        <blockquote class="card">
+          <p>"Meu cabelo ficou incrível — super recomendo o tratamento de reconstrução."</p>
+          <footer class="muted">— Camila, cliente</footer>
+        </blockquote>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTATO / AGENDAMENTO
+    ============================================================ -->
+    <section id="contato">
+      <h2>Contato / Agendamento</h2>
+
+      <div class="contact-grid">
+
+        <form id="contactForm" onsubmit="return submitForm(event)">
+          <label>Nome
+            <input type="text" name="name" required placeholder="Seu nome">
+          </label>
+
+          <label>Telefone
+            <input type="tel" name="phone" required placeholder="(00) 90000-0000">
+          </label>
+
+          <label>Serviço desejado
+            <select name="service">
+              <option>Corte</option>
+              <option>Coloração</option>
+              <option>Tratamento</option>
+              <option>Penteado</option>
+            </select>
+          </label>
+
+          <label>Data e horário
+            <input type="datetime-local" name="datetime">
+          </label>
+
+          <label>Mensagem
+            <textarea name="message" rows="3" placeholder="Detalhes adicionais (opcional)"></textarea>
+          </label>
+
+          <button type="submit">Enviar pedido</button>
+        </form>
+
+
+        <aside class="card">
+          <h3>Outras formas</h3>
+
+          <p class="muted">WhatsApp: (66) 99231-7646</p>
+          <p class="muted">
+            Instagram:
+            <a href="https://www.instagram.com/lidia_amaral_oficial">@lidiaamaral</a>
+          </p>
+
+          <div style="margin-top:1rem;">
+            <h3>Localização</h3>
+
+            <div class="muted">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.306421651787!2d-52.166144526051966!3d-14.059074282623573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x936db7837fcd5835%3A0x2ecd66571f451978!2sMorena%20Rosa%20Art%20%26%20Beleza!5e0!3m2!1spt-BR!2sbr!4v1763381108132!5m2!1spt-BR!2sbr"
+                style="width:100%; height:350px; border:0; max-width:100%;"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container center">
+      <div>© <strong>Lidia Amaral</strong> — Todos os direitos reservados</div>
+      <div class="muted" style="margin-top:.5rem">Desenvolvido por Raymora Katielle</div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript do menu e formulário -->
+  <script src="script.js"></script>
 
 </body>
 
