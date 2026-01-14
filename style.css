@@ -350,12 +350,12 @@ footer {
   /* remove qualquer "puxão" / margem extra da hero no desktop */
   .hero {
     margin-top: 0 !important;
-    padding-top: -1rem !important; /* mantém um respiro bonito */
+    padding-top: 5rem !important; /* mantém um respiro bonito */
   }
 
   /* como seu header é sticky, esse respiro evita encostar demais */
   header + main.container {
-    padding-top: -1rem !important;
+    padding-top: 5rem !important;
   }
 
   /* aproxima serviços da hero (se você ainda quer menos espaço) */
