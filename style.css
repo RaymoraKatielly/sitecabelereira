@@ -301,26 +301,7 @@ footer {
   color: var(--primary);
   font-weight: 700;
 }
-/* ===== AJUSTE FINO DA HERO (tira o espaço que sobrou) ===== */
 
-/* puxa a hero um pouco pra cima, sem mexer no resto */
-.hero {
-  margin-top: -0.1rem !important;  /* se achar muito, troca pra -1rem */
-  
-}
-  :root {
-    --altura-header: 0.0rem;
-  }
-
-/* garante que o container não coloque espaço extra em cima */
-.container {
-  padding-top: 0 !important;
-}
-
-/* só pra não grudar demais a frase na barra */
-.hero .pill {
-  margin-top: 0.0rem;
-}
 /* =========================================================
    CORREÇÃO MOBILE: conteúdo não ficar por baixo do header
    (corrige o pill cortado na HERO)
@@ -352,5 +333,33 @@ footer {
   /* quando clicar no menu (#servicos/#galeria etc.), não ficar escondido no header */
   section[id] {
     scroll-margin-top: calc(var(--altura-header) + 10px);
+  }
+}
+/* =========================================================
+   AJUSTE DESKTOP: remove espaço sobrando acima da HERO
+   (não altera mobile)
+   ========================================================= */
+
+@media (min-width: 681px) {
+
+  /* garante que o main não empurre a hero para baixo */
+  main.container {
+    padding-top: 0 !important;
+  }
+
+  /* remove qualquer "puxão" / margem extra da hero no desktop */
+  .hero {
+    margin-top: 0 !important;
+    padding-top: 1rem !important; /* mantém um respiro bonito */
+  }
+
+  /* como seu header é sticky, esse respiro evita encostar demais */
+  header + main.container {
+    padding-top: 1rem !important;
+  }
+
+  /* aproxima serviços da hero (se você ainda quer menos espaço) */
+  #servicos {
+    margin-top: 0 !important;
   }
 }
