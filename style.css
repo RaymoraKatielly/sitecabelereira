@@ -326,7 +326,7 @@ footer {
 
   /* altura aproximada do header no mobile (ajuste fino se precisar) */
   :root {
-    --altura-header: 50px;
+    --altura-header: 0px;
   }
 
   /* cria espaço real abaixo do header sticky */
