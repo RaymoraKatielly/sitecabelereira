@@ -326,7 +326,7 @@ footer {
 
   /* altura aproximada do header no mobile (ajuste fino se precisar) */
   :root {
-    --altura-header: 50px;
+    --altura-header: 0.0rem;
   }
 
   /* cria espaço real abaixo do header sticky */
@@ -342,7 +342,7 @@ footer {
 
   /* evita o pill encostar no topo */
   .pill {
-    margin-top: 0.5rem;
+    margin-top: 0.0rem;
   }
 
   /* quando clicar no menu (#servicos/#galeria etc.), não ficar escondido no header */
