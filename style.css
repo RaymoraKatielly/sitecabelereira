@@ -317,3 +317,36 @@ footer {
 .hero .pill {
   margin-top: 0.5rem;
 }
+/* =========================================================
+   CORREÇÃO MOBILE: conteúdo não ficar por baixo do header
+   (corrige o pill cortado na HERO)
+   ========================================================= */
+
+@media (max-width: 680px) {
+
+  /* altura aproximada do header no mobile (ajuste fino se precisar) */
+  :root {
+    --altura-header: 84px;
+  }
+
+  /* cria espaço real abaixo do header sticky */
+  main.container {
+    padding-top: calc(var(--altura-header) - 10px) !important;
+  }
+
+  /* desfaz qualquer "puxão" da hero no mobile */
+  .hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* evita o pill encostar no topo */
+  .pill {
+    margin-top: 0.5rem;
+  }
+
+  /* quando clicar no menu (#servicos/#galeria etc.), não ficar escondido no header */
+  section[id] {
+    scroll-margin-top: calc(var(--altura-header) + 10px);
+  }
+}
