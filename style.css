@@ -306,7 +306,11 @@ footer {
 /* puxa a hero um pouco pra cima, sem mexer no resto */
 .hero {
   margin-top: -0.1rem !important;  /* se achar muito, troca pra -1rem */
+  
 }
+  :root {
+    --altura-header: 0.0rem;
+  }
 
 /* garante que o container não coloque espaço extra em cima */
 .container {
