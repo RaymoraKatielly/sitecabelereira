@@ -331,7 +331,7 @@ footer {
 
   /* cria espaço real abaixo do header sticky */
   main.container {
-    padding-top: calc(var(--altura-header) - 10px) !important;
+    padding-top: calc(var(--altura-header) - 0px) !important;
   }
 
   /* desfaz qualquer "puxão" da hero no mobile */
