@@ -197,6 +197,8 @@ button{
   padding:0.7rem 0.9rem;    /* menor */
   cursor:pointer;
   font-weight:600;
+  width: 100%;
+  max-width: 100%;
 }
 
 .map{
