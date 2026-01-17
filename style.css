@@ -97,7 +97,17 @@ nav ul{
   color:var(--muted);
   margin:0 0 1.2rem;
 }
-.hero-copy{ margin:0 0 1.2rem; }
+.hero-copy{
+  margin:0 0 1.2rem;
+  text-align: justify;
+}
+
+@media (max-width:680px){
+  .hero-copy{
+    text-align: left;
+  }
+}
+
 .hero-actions{ display:flex; gap:0.8rem; align-items:center; margin-top:1rem; flex-wrap:wrap; }
 
 .btn-outline{
