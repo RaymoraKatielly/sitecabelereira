@@ -195,11 +195,14 @@ button{
   background:var(--primary);
   color:#fff;
   border:0;
-  padding:0.7rem 0.9rem;    /* menor */
+  padding:0.7rem 0.9rem;
   cursor:pointer;
   font-weight:600;
-  width: 100%;
-  max-width: 100%;
+
+  width:100%;
+  border-radius:12px;
+  appearance:none;
+  -webkit-appearance:none;
 }
 
 .map{
