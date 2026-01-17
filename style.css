@@ -86,7 +86,7 @@ nav ul{
   grid-template-columns:1fr 420px;
   gap:2rem;
   align-items:center;
-  padding:3rem 0;
+  padding:1.5rem 0 3rem;
 }
 .hero h1{
   font-family:'Playfair Display',serif;
