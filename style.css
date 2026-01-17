@@ -118,6 +118,9 @@ nav ul{
   text-align: justify;
 }
 @media (max-width:680px){
+    .grid-2{
+    grid-template-columns: 1fr;
+  }
   .hero-copy{ text-align:left; }
 }
 
