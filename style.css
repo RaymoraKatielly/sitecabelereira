@@ -10,8 +10,13 @@
 }
 
 /* reset */
-*{ box-sizing:border-box; }
 html,body{ height:100%; }
+
+/* trava rolagem horizontal no mobile */
+html, body{
+  overflow-x: hidden;
+}
+/* body */
 body{
   margin:0;
   background:#fff;
@@ -218,6 +223,7 @@ footer{
   border-radius:12px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
   z-index:999;
+  max-width: calc(100vw - 1.5rem);
 }
 .menu-open-list{
   list-style:none;
@@ -254,6 +260,15 @@ footer{
 /* small helpers */
 .muted{ color:var(--muted); }
 .center{ text-align:center; }
+/* evita textos longos estourarem a tela */
+.hero-address,
+.brand-desc,
+.muted,
+.service,
+.card{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 .pill{
   display:inline-block;
   padding:0.2rem 0.6rem;    /* menor */
