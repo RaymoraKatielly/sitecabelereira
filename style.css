@@ -190,6 +190,7 @@ input,textarea,button,select{
   border-radius:10px;
   border:1px solid #e6e6e6;
   font-size:0.95rem;
+  width: 100%;
 }
 button{
   background:var(--primary);
