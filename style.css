@@ -181,11 +181,11 @@ h2{
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 360px;
-  gap:0.75rem;              /* menor */
+  gap:0.60rem;              /* menor */
 }
 form{ display:flex; flex-direction:column; gap:0.5rem; }
 input,textarea,button,select{
-  padding:0.6rem;           /* menor */
+  padding:0.5rem;           /* menor */
   border-radius:10px;
   border:1px solid #e6e6e6;
   font-size:0.95rem;
