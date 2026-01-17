@@ -269,8 +269,6 @@ footer{
   overflow-wrap: break-word;
   word-break: normal;
 }
-.small{ font-size:0.9rem;
-}
 .pill{
   display:inline-block;
   padding:0.2rem 0.6rem;    /* menor */
