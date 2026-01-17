@@ -184,13 +184,16 @@ h2{
   grid-template-columns:1fr 360px;
   gap:0.60rem;              /* menor */
 }
-form{ display:flex; flex-direction:column; gap:0.5rem; }
+form{ display:flex; flex-direction:column; gap:0.5rem; width: 100%;
+  max-width:100%; }
 input,textarea,button,select{
   padding:0.5rem;           /* menor */
   border-radius:10px;
   border:1px solid #e6e6e6;
   font-size:0.95rem;
-  width: 100%;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
 }
 button{
   background:var(--primary);
@@ -204,6 +207,7 @@ button{
   border-radius:12px;
   appearance:none;
   -webkit-appearance:none;
+  overflow:hidden;
 }
 
 .map{
