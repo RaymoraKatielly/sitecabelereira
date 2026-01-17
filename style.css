@@ -193,7 +193,7 @@ input,textarea,button,select{
 button{
   background:var(--primary);
   color:#fff;
-  border:1;
+  border:0;
   padding:0.7rem 0.9rem;    /* menor */
   cursor:pointer;
   font-weight:600;
