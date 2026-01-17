@@ -186,6 +186,23 @@ h2{
 }
 form{ display:flex; flex-direction:column; gap:0.5rem; width: 100%;
   max-width:100%; }
+  
+  /* Chrome mobile: evita corte/estouro em elementos dentro do form */
+form, form *{
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+form label{
+  display: block;
+}
+
+input, textarea, select, button{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 input,textarea,button,select{
   padding:0.5rem;           /* menor */
   border-radius:10px;
