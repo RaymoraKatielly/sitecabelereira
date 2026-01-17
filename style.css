@@ -265,11 +265,11 @@ footer{
 /* evita textos longos estourarem a tela */
 .hero-address,
 .brand-desc,
-.muted,
-.service,
-.card{
-  overflow-wrap: anywhere;
-  word-break: break-word;
+.muted{
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.small{ font-size:0.9rem;
 }
 .pill{
   display:inline-block;
