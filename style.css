@@ -296,3 +296,9 @@ footer{
 .fw-700{ font-weight:700; }
 .quote{ margin:0 0 0.4rem; } /* menor */
 .lead{ font-size:1.1rem; margin:0 0 0.5rem; color:var(--muted); } /* menor */
+/* FORÇA 1 COLUNA NO MOBILE (corrige os cards espremidos) */
+@media (max-width:680px){
+  .grid-2{
+    grid-template-columns: 1fr !important;
+  }
+}
