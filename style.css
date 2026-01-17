@@ -121,7 +121,6 @@ nav ul{
     .grid-2{
     grid-template-columns: 1fr;
   }
-  .hero-copy{ text-align:left; }
 }
 
 .hero-actions{
