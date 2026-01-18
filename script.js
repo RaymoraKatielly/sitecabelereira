@@ -1,4 +1,6 @@
-// ===== MENU MOBILE =====
+// ===============================
+// MENU MOBILE
+// ===============================
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector(".menu-toggle");
   if (!btn) return;
@@ -25,12 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.appendChild(menuEl);
 
+    // Fecha ao clicar em um link do menu
     menuEl.addEventListener("click", (e) => {
       const a = e.target.closest("a");
       if (a) closeMenu();
     });
 
+    // Fecha ao clicar fora
     document.addEventListener("click", handleOutsideClick, true);
+
+    // Fecha no ESC
     document.addEventListener("keydown", handleEsc);
   }
 
@@ -63,27 +69,54 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// ===== FORMULÁRIO (SIMULAÇÃO) =====
+
+// ===============================
+// FORMULÁRIO -> ENVIA PARA WHATSAPP
+// ===============================
+
+// Ajuste aqui se mudar o número:
+const WHATSAPP_NUMBER = "5566992317646"; // DDI+DDD+numero (sem espaços)
+
+// Converte "2026-01-18T14:30" -> "18/01/2026 14:30"
+function formatDatetimeBR(value) {
+  if (!value) return "";
+  const [date, time] = value.split("T");
+  if (!date || !time) return value;
+
+  const [y, m, d] = date.split("-");
+  return `${d}/${m}/${y} ${time}`;
+}
+
 function submitForm(e) {
   e.preventDefault();
 
   const f = e.target;
 
-  const data = {
-    nome: f.name?.value || "",
-    telefone: f.phone?.value || "",
-    servico: f.service?.value || "",
-    datetime: f.datetime?.value || "",
-    mensagem: f.message?.value || ""
-  };
+  const nome = (f.name?.value || "").trim();
+  const telefone = (f.phone?.value || "").trim();
+  const servico = (f.service?.value || "").trim();
+  const dataHora = formatDatetimeBR(f.datetime?.value || "");
+  const mensagem = (f.message?.value || "").trim();
 
-  alert(
-    "Pedido enviado!\n" +
-    "Nome: " + data.nome + "\n" +
-    "Serviço: " + data.servico + "\n" +
-    "Entraremos em contato."
-  );
+  // Monta texto bonito para WhatsApp
+  const linhas = [
+    "Olá, Lídia! Gostaria de agendar um horário 😊",
+    "",
+    `Nome: ${nome}`,
+    `Telefone: ${telefone}`,
+    `Serviço: ${servico}`,
+    dataHora ? `Data e horário: ${dataHora}` : "Data e horário: (não informado)",
+    mensagem ? `Mensagem: ${mensagem}` : null
+  ].filter(Boolean);
 
+  const texto = encodeURIComponent(linhas.join("\n"));
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`;
+
+  // Abre WhatsApp com mensagem pronta
+  window.open(url, "_blank", "noopener,noreferrer");
+
+  // Limpa o formulário
   f.reset();
+
   return false;
 }
