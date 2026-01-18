@@ -100,7 +100,7 @@ function submitForm(e) {
 
   // Monta texto bonito para WhatsApp
   const linhas = [
-    "Olá, Lídia! Gostaria de agendar um horário 😊",
+    "Olá, Lídia! Gostaria de agendar um horário.",
     "",
     `Nome: ${nome}`,
     `Telefone: ${telefone}`,
