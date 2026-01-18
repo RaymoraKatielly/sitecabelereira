@@ -1,6 +1,6 @@
-# Site Institucional – Lidia Amaral
+# Site Pessoal – Lidia Amaral
 
-Site institucional responsivo desenvolvido para profissional da área de beleza.
+Site pessoal responsivo desenvolvido para profissional da área de beleza.
 
 ## Objetivo
 Apresentar serviços, identidade visual e facilitar o contato/agendamento.
