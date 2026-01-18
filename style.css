@@ -227,17 +227,20 @@ button{
   overflow:hidden;
 }
 
+.center-map{
+  text-align:center;
+}
+
 .map{
-  box-shadow:0 12px 30px rgba(0,0,0,0.08);
   display:block;
   margin:1rem auto 0;
   width:100%;
   max-width:900px;
   height:320px;
-  border:0;
   border-radius:16px;
+  border:0;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
-
 
 /* footer (compacto) */
 footer{
